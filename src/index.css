@@ -6,6 +6,9 @@
   html {
     font-family: Lato, system-ui, Avenir, Helvetica, Arial, sans-serif;
   }
+  body {
+    background-color: #F2F2F2;
+  }
 }
 
 * {
