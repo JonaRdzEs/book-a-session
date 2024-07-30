@@ -6,9 +6,8 @@ type TagProps = {
 };
 
 function Tag({ children, size = "xs" }: TagProps) {
-  const textSize = `text-${size}`
   return (
-    <span className={`${textSize} text-center px-2 py-1 bg-[#6CA0DC] rounded-lg text-[#33333]`}>
+    <span className={`text-center px-2 py-1 bg-light-gray rounded-lg text-${size} text-xs`}>
       {children}
     </span>
   );

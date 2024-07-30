@@ -18,7 +18,7 @@ function Header() {
           </div>
           <li>
             <Button
-              className="flex justify-center items-center w-32 h-10 text-[#F2F2F2] bg-[#3A4E75] font-bold rounded-sm"
+              className="flex justify-center items-center w-32 h-10 text-light-gray bg-navy-blue font-bold rounded-sm"
               to="/my-sessions"
             >
               My sessions

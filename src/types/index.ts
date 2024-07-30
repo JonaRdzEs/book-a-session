@@ -12,3 +12,11 @@ export type Session = {
   duration: number;
   date: string;
 };
+
+export type UpcomingSession = {
+  id: string;
+  title: string;
+  summary: string;
+  releaseDate: string;
+  image: string;
+}

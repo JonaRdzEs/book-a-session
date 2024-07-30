@@ -3,6 +3,8 @@ import Header from "./components/Header";
 import Home from "./pages/Home";
 import Sessions from "./pages/Sessions";
 import Session from "./pages/Session";
+import MySessions from "./pages/MySessions";
+import UpcomingSessions from "./pages/UpcomingSessions";
 
 function App() {
 
@@ -16,12 +18,8 @@ function App() {
           <Route path="/sessions/:id">
             {({ id }) => <Session id={id} />}
           </Route>
-          <Route path="/upcoming-sessions">
-            <h1>Upcoming sessions</h1>
-          </Route>
-          <Route path="/my-sessions">
-            my sessions
-          </Route>
+          <Route path="/upcoming-sessions" component={UpcomingSessions}/>
+          <Route path="/my-sessions" component={MySessions}/>
           <Route>404: No such page!</Route>
         </Switch>
       </main>

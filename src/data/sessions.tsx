@@ -9,8 +9,8 @@ export const sessions: Session[] = [
       "Redux can revolutionize your approach to state management.\n\nIn this session, we'll explore the core concepts of Redux, including actions, reducers, and the store.\n\nWe'll examine best practices for structuring your Redux store and handling asynchronous operations with middleware like Redux Thunk and Redux Saga.\n\nThrough practical examples, you'll learn how to debug and optimize your Redux-powered applications.\n\nBy the end of our session, you'll be equipped with the knowledge to implement robust state management in your React projects.",
     duration: 2,
     date: "2023-11-02",
-    image: "https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    tags: ["redux", "react", "advanced", "state"]
+    image: "https://img-b.udemycdn.com/course/750x422/4830120_302f_3.jpg",
+    tags: ["Redux", "React", "advanced", "state"]
   },
   {
     id: "550e8400-e29b-41d4-a716-446655440002",
@@ -20,7 +20,8 @@ export const sessions: Session[] = [
       "TypeScript adds a powerful layer of type safety to JavaScript.\n\nIn this session, we'll start with the fundamentals of TypeScript, covering basic types, interfaces, and type aliases.\n\nWe'll explore how TypeScript improves code readability and reduces bugs.\n\nYou'll learn how to set up a TypeScript project, integrate it with existing JavaScript code, and leverage TypeScript's type-checking capabilities.\n\nBy the end, you'll have a solid foundation in TypeScript to build more reliable and maintainable applications.",
     duration: 1.5,
     date: "2023-11-03",
-    image: "typescriptBasics",
+    image: "https://miro.medium.com/v2/resize:fit:1200/1*5iPC_SdbAzD3j84j97RbBA.jpeg",
+    tags: ["TypeScript", "basic", "introduction"]
   },
   {
     id: "550e8400-e29b-41d4-a716-446655440003",
@@ -30,8 +31,8 @@ export const sessions: Session[] = [
       "React hooks bring powerful features to functional components.\n\nWe'll cover useState, useEffect, useContext, and custom hooks in this session.\n\nYou'll learn how hooks simplify state management and side effects in functional components.\n\nThrough examples, we'll explore best practices for using hooks effectively and avoiding common pitfalls.\n\nBy the end, you'll be able to refactor class components to hooks and leverage their full potential in your React projects.",
     duration: 1,
     date: "2023-11-04",
-    image: "reactHooks",
-    tags: ["hooks", "react"]
+    image: "https://images.unsplash.com/photo-1687603921109-46401b201195?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    tags: ["hooks", "React", "components", "useEffect", "useState"]
   },
   {
     id: "550e8400-e29b-41d4-a716-446655440004",
@@ -41,7 +42,8 @@ export const sessions: Session[] = [
       "Tailwind CSS offers a utility-first approach to styling.\n\nIn this session, we'll explore how to build responsive and visually appealing UIs with Tailwind CSS.\n\nWe'll cover the basics of utility classes, responsive design principles, and customizing the Tailwind configuration.\n\nYou'll learn how to create consistent and maintainable styles across your application.\n\nBy the end, you'll be able to rapidly design and develop responsive UIs with Tailwind CSS.",
     duration: 1.5,
     date: "2023-11-05",
-    image: "tailwindCSS",
+    image: "https://blog.webdrip.in/images/uploads/floating-on-tailwind-css.png",
+    tags: ["responsive design", "Tailwind"]
   },
   {
     id: "550e8400-e29b-41d4-a716-446655440005",
@@ -52,7 +54,8 @@ export const sessions: Session[] = [
       "GraphQL can streamline your data-fetching strategy.\n\nIn this session, we'll introduce GraphQL and its core concepts, including queries, mutations, and resolvers.\n\nYou'll learn how to set up a GraphQL server and client with Apollo.\n\nWe'll explore how to write efficient queries and handle real-time updates with subscriptions.\n\nBy the end, you'll have the skills to integrate GraphQL into your React applications for more efficient data management.",
     duration: 2,
     date: "2023-11-06",
-    image: "graphqlReact",
+    image: "https://miro.medium.com/max/1400/0*GEt6E-XBrPM0gO3f",
+    tags: ["React", "GraphQL", "data fetching", "efficient", "introduction"]
   },
   {
     id: "550e8400-e29b-41d4-a716-446655440006",
@@ -62,7 +65,8 @@ export const sessions: Session[] = [
       "React Native allows you to build mobile apps with React.\n\nIn this session, we'll cover the fundamentals of React Native, including the setup, components, and navigation.\n\nYou'll learn how to use native modules and access device features.\n\nWe'll explore best practices for performance optimization and debugging.\n\nBy the end, you'll be equipped to build and deploy mobile apps for both iOS and Android using React Native.",
     duration: 3,
     date: "2023-11-07",
-    image: "reactNative",
+    image: "https://flatirons.com/static/c8cb21eccc0362e40279fcefdbc7d9b6/d7e39/The-Unofficial-Guide-to-React-Native-1.webp",
+    tags: ["mobile apps", "native"]
   },
   {
     id: "550e8400-e29b-41d4-a716-446655440007",
@@ -73,7 +77,8 @@ export const sessions: Session[] = [
       "Next.js provides powerful features for server-side rendering in React.\n\nIn this session, we'll explore the benefits of server-side rendering and how to set up a Next.js project.\n\nYou'll learn about static site generation, dynamic routing, and API routes.\n\nWe'll also cover how to optimize performance and manage data fetching on the server.\n\nBy the end, you'll have a solid understanding of how to use Next.js to build fast and SEO-friendly React applications.",
     duration: 2,
     date: "2023-11-08",
-    image: "nextJS",
+    image: "https://miro.medium.com/v2/resize:fit:700/0*_S488_YsHuhH0wtt.png",
+    tags: ["framework", "React", "NextJS", "SSR"]
   },
   {
     id: "550e8400-e29b-41d4-a716-446655440008",
@@ -83,7 +88,8 @@ export const sessions: Session[] = [
       "Testing is crucial for maintaining robust applications.\n\nIn this session, we'll cover the basics of unit testing in React using Jest and Enzyme.\n\nYou'll learn how to write and run tests for your components, mock dependencies, and handle asynchronous code.\n\nWe'll explore best practices for structuring tests and achieving high code coverage.\n\nBy the end, you'll be confident in writing tests that ensure the reliability of your React applications.",
     duration: 1.5,
     date: "2023-11-09",
-    image: "unitTesting",
+    image: "https://velog.velcdn.com/images/kozel/post/e3937819-59b7-4fb0-b2cb-09bc1191c7a7/image.png",
+    tags: ["testing", "Jest", "components", "Enzyme", "basic"]
   },
   {
     id: "550e8400-e29b-41d4-a716-446655440009",
@@ -93,8 +99,8 @@ export const sessions: Session[] = [
       "React's Context API provides a way to manage state across your application.\n\nIn this session, we'll explore how to use the Context API to share state without prop drilling.\n\nYou'll learn how to create and use context, manage complex state, and optimize performance.\n\nThrough practical examples, we'll demonstrate best practices for using the Context API effectively.\n\nBy the end, you'll be able to manage state more efficiently in your React applications.",
     duration: 1,
     date: "2023-11-10",
-    image: "contextAPI",
-    tags: ["contextApi", "state", "global", "best practices", "optimize"]
+    image: "https://miro.medium.com/v2/resize:fit:1400/1*MkLBSIsUGuf-ZSqvyCeAHQ.png",
+    tags: ["Context Api", "state", "global", "best practices", "optimize"]
   },
   {
     id: "550e8400-e29b-41d4-a716-446655440010",
@@ -104,7 +110,8 @@ export const sessions: Session[] = [
       "Accessibility is essential for reaching a broader audience.\n\nIn this session, we'll cover the fundamentals of web accessibility and how to implement them in React.\n\nYou'll learn about ARIA roles, keyboard navigation, and semantic HTML.\n\nWe'll explore tools for testing accessibility and best practices for designing inclusive UIs.\n\nBy the end, you'll be equipped to create React applications that are accessible to everyone.",
     duration: 1.5,
     date: "2023-11-11",
-    image: "accessibleReact",
+    image: "https://www.salesforce.com/blog/wp-content/uploads/sites/2/2024/04/accessible_apps_design.png",
+    tags: ["accessibility", "a11", "React", "introduction", "basic"]
   },
   {
     id: "550e8400-e29b-41d4-a716-446655440011",
@@ -115,7 +122,8 @@ export const sessions: Session[] = [
       "TypeScript can greatly improve the reliability of your React code.\n\nIn this session, we'll delve into advanced TypeScript features such as generics, type inference, and utility types.\n\nYou'll learn how to create complex types and leverage TypeScript's powerful type system to catch errors early.\n\nWe'll also explore how to integrate TypeScript with popular React libraries and tools.\n\nBy the end, you'll have a deeper understanding of how to use TypeScript to build robust and maintainable React applications.",
     duration: 2,
     date: "2023-11-12",
-    image: "advancedTypeScript",
+    image: "https://miro.medium.com/v2/resize:fit:1024/1*CHH1P0NwJfZzXXHo-VUzOA.png",
+    tags: ["advanced", "TypeScript", "React"]
   },
   {
     id: "550e8400-e29b-41d4-a716-446655440012",
@@ -126,7 +134,8 @@ export const sessions: Session[] = [
       "WebSockets enable real-time communication in web applications.\n\nIn this session, we'll explore how to use WebSockets to build real-time features in your React applications.\n\nYou'll learn about the WebSocket protocol, setting up a WebSocket server, and integrating it with your React frontend.\n\nWe'll cover practical examples such as real-time chat and notifications.\n\nBy the end, you'll be able to create interactive and real-time experiences using WebSockets in React.",
     duration: 2,
     date: "2023-11-13",
-    image: "realTimeApps",
+    image: "https://blog.openreplay.com/images/real-time-features-in-react-using-websockets/images/hero.png",
+    tags: ["WebSockets", "React", "real-time"]
   },
   {
     id: "550e8400-e29b-41d4-a716-446655440013",
@@ -136,8 +145,8 @@ export const sessions: Session[] = [
       "Docker simplifies the deployment of applications by containerizing them.\n\nIn this session, we'll cover the basics of Docker and how to containerize your React applications.\n\nYou'll learn how to create Dockerfiles, build Docker images, and run containers.\n\nWe'll also explore best practices for setting up development and production environments with Docker.\n\nBy the end, you'll be able to deploy your React applications using Docker for consistent and reproducible environments.",
     duration: 1.5,
     date: "2023-11-14",
-    image: "dockerDeployment",
-    tags: ["docker", "containers", "react", "basic"]
+    image: "https://picperf.io/https://laravelnews.s3.amazonaws.com/images/docker.png",
+    tags: ["Docker", "containers", "React", "basic"]
   },
   {
     id: "550e8400-e29b-41d4-a716-446655440014",
@@ -148,7 +157,8 @@ export const sessions: Session[] = [
       "Performance is key to providing a good user experience.\n\nIn this session, we'll explore various techniques for optimizing the performance of React applications.\n\nYou'll learn about code splitting, lazy loading, and memoization.\n\nWe'll cover how to use tools like React Profiler and Lighthouse to identify and address performance bottlenecks.\n\nBy the end, you'll be able to apply best practices to ensure your React applications are fast and responsive.",
     duration: 2,
     date: "2023-11-15",
-    image: "performanceOptimization",
+    image: "https://img.freepik.com/free-vector/custom-style-script-website-optimization-coding-software-development-female-programmer-cartoon-character-working-adding-javascript-css-code_335657-2370.jpg",
+    tags: ["optimization", "performance"]
   },
   {
     id: "550e8400-e29b-41d4-a716-446655440015",
@@ -159,6 +169,7 @@ export const sessions: Session[] = [
       "GraphQL subscriptions enable real-time updates in your applications.\n\nIn this session, we'll explore how to set up and use GraphQL subscriptions with Apollo and React.\n\nYou'll learn about the Pub/Sub model, setting up a subscription server, and integrating it with your frontend.\n\nWe'll cover practical examples such as live data feeds and notifications.\n\nBy the end, you'll be able to implement real-time features using GraphQL subscriptions in your React applications.",
     duration: 2,
     date: "2023-11-16",
-    image: "graphqlSubscriptions",
+    image: "https://www.freecodecamp.org/news/content/images/2020/04/cover-3.png",
+    tags: ["GraphQL", "Apollo", "ReactJS"]
   },
 ];
