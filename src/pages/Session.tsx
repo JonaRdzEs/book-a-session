@@ -33,19 +33,32 @@ function Session({ id }: SessionProps) {
     );
   }
 
+  const handleClick = () => {
+
+  };
+
   return (
     <>
-      <div className="mt-10">
-        <img className="rounded-sm object-cover" src={session.image} alt="" />
-        <div className="flex justify-center items-center flex-col gap-2 my-4">
-          <Title className="text-2xl font-bold text-center">
-            {session.title}
-          </Title>
-          <span className="text-dark-gray font-bold">{session.date}</span>
+      <div className="mt-10 md:w-10/12 md:mx-auto lg:w-full lg:flex lg:items-start gap-10 lg:relative">
+        <img
+          className="rounded-sm object-cover lg:w-2/4 md:mx-auto"
+          src={session.image}
+          alt=""
+        />
+        <div>
+          <div className="flex justify-center items-center flex-col gap-2 my-4 lg:mt-0 lg:items-start">
+            <Title className="text-2xl font-bold text-center lg:text-left lg:w-4/6">
+              {session.title}
+            </Title>
+            <span className="text-dark-gray font-bold">{session.date}</span>
+          </div>
+          <p className="text-lg">{session.description}</p>
         </div>
-        <p className="text-lg">{session.description}</p>
       </div>
-      <Button className="flex justify-center items-center gap-2 flex-wrap bg-navy-blue text-light-gray w-full max-w-40 rounded-sm h-12 mt-8 mx-auto">
+      <Button
+        className="flex justify-center items-center gap-2 flex-wrap bg-navy-blue text-light-gray w-full max-w-40 rounded-sm h-12 mt-8 mx-auto lg:absolute lg:top-[90px] lg:right-14"
+        onClick={handleClick}
+      >
         Add session
         <BookmarkPlus width="20px" height="20px" />
       </Button>

@@ -26,18 +26,18 @@ function SessionCard(props: SessionCardProps | UpcomingSessionCardProps) {
   const {image = "", title, summary, tags = [], actionBtn = null} = props
 
   return (
-    <div className="bg-white pb-4 rounded-md overflow-hidden shadow-sm">
+    <div className="bg-white pb-4 rounded-md overflow-hidden shadow-sm max-w-md mx-auto h-96">
       {image ? (
-        <img className="w-full h-32 object-cover shadow-[0px_1px_2px_0px_rgba(0,0,0,0.1)]" src={image} alt="" />
+        <img className="w-full h-2/4 object-cover shadow-[0px_1px_2px_0px_rgba(0,0,0,0.1)]" src={image} alt="" />
       ) : (
         <div>Placeholder</div>
       )}
-      <div className="w-full px-4">
+      <div className="w-full h-2/4 px-4 flex flex-col items-stretch justify-between mt-2">
         <Title className="font-bold text-center text-lg mt-2 text-dark-charcoal" level="h4">
           {title}
         </Title>
         <p className="text-center text-base mt-1 text-dark-charcoal">{summary}</p>
-        <div className="mt-10 flex justify-end items-center">
+        <div className=" flex justify-end items-center justify-self-end">
           {tags.length > 0 && (
             <div className="flex justify-start items-center gap-1 flex-wrap flex-grow">
               {[...tags].splice(0, 3).map((tag, index) => (

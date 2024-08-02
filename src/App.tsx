@@ -9,7 +9,7 @@ import UpcomingSessions from "./pages/UpcomingSessions";
 function App() {
 
   return (
-    <div className="mx-auto w-full max-w-7xl min-h-dvh border-2 py-11 px-2">
+    <div className="mx-auto w-full max-w-7xl min-h-dvh border-2 py-11 px-2 sm:px-10">
       <Header />
       <main>
         <Switch>
