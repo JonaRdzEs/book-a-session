@@ -1,9 +1,13 @@
 import EmptyContent from "../components/EmptyContent";
 import BookmarkPlus from "../components/common/icons/BookmarkPlus";
-const mySessions = [];
+import { useSelector } from "../store/hooks";
+import SessionCard from "../components/SessionCard";
+import DeleteSessionButton from "../components/common/DeleteSessionButton";
 
 function MySessions() {
-  if (mySessions.length === 0) {
+  const { sessions } = useSelector((state) => state.userSessions);
+  console.log(sessions)
+;  if (sessions.length === 0) {
     return (
       <EmptyContent
         icon={BookmarkPlus}
@@ -15,7 +19,13 @@ function MySessions() {
       />
     );
   }
-  return <div></div>;
+  return <ul className="flex gap-6 flex-col w-full mx-auto mt-10 sm:grid sm:grid-cols-2 sm:gap-5 xl:grid-cols-3">
+  {sessions.map((session) => (
+    <li key={session.sessionId}>
+      <SessionCard {...session} actionBtn={<DeleteSessionButton id={session.sessionId} />} />
+    </li>
+  ))}
+</ul>;
 }
 
 export default MySessions;

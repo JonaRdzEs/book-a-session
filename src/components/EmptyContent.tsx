@@ -16,7 +16,7 @@ function EmptyContent({ title, description, icon, actionButton = null }: EmptyCo
       <Title level="h2" className="font-bold text-center text-2xl text-[#333333]">
         {title}
       </Title>
-      <p className="text-center text-lg">
+      <p className="text-center text-lg lg:w-8/12 mx-auto">
         {description}
       </p>
       {actionButton}

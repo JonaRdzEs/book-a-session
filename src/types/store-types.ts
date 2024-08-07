@@ -1,11 +1,14 @@
-import { Session } from "."
+type SavedSessions = {
+  sessionId: string,
+  name: string,
+  email: string,
+  title: string,
+  summary: string,
+  image: string,
+};
 
 export type UserSessions = {
-  sessions: Session[]
+  sessions: SavedSessions[]
 };
 
-export type AddSessionPayload = {
-  email: string,
-  name: string,
-  sessionId: string,
-};
+export type AddSessionPayload = SavedSessions;

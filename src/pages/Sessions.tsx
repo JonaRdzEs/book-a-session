@@ -13,7 +13,7 @@ function Sessions() {
         started or an experienced developer seeking to stay current with the
         latest trends, our sessions offer something for everyone.
       </p>
-      <ul className="flex gap-6 flex-col w-full mx-auto mt-10 sm:grid sm:grid-cols-2 sm:gap-5">
+      <ul className="flex gap-6 flex-col w-full mx-auto mt-10 sm:grid sm:grid-cols-2 sm:gap-5 xl:grid-cols-3">
         {sessions.map((session) => (
           <li key={session.id}>
             <SessionCard {...session} actionBtn={<SeeSessionButton id={session.id} />} />

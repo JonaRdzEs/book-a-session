@@ -12,7 +12,7 @@ function UpcomingSessions() {
         learners. Browse through the sessions that will be available soon
         and prepare to enhance your skills.
       </p>
-      <ul className="flex gap-6 flex-col w-full mx-auto mt-10 sm:grid sm:grid-cols-2 sm:gap-5">
+      <ul className="flex gap-6 flex-col w-full mx-auto mt-10 sm:grid sm:grid-cols-2 sm:gap-5 xl:grid-cols-3">
         {upcomingSessions.map((session) => (
           <li key={session.id}>
             <SessionCard {...session} />

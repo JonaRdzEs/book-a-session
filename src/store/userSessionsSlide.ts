@@ -10,16 +10,24 @@ const userSessionsSlide = createSlice({
   initialState,
   reducers: {
     addSession(state, action: PayloadAction<AddSessionPayload>):void {
-      console.log(state);
-      console.log(action);
-      // email, name, sessionId
+      const isSessionRegistered = state.sessions.find((session) => session.sessionId === action.payload.sessionId);
+      if(isSessionRegistered) {
+        console.log("You cannot register to the same session");
+        return;
+      }
+
+      state.sessions.push(action.payload);
+
     },
     removeSession(state, action: PayloadAction<string>) {
-      // sessionId
-      console.log(state);
-      console.log(action);
+      const sessionIndex = state.sessions.findIndex((session) => session.sessionId === action.payload);
+      if(sessionIndex >= 0) {
+        state.sessions.splice(sessionIndex, 1)
+      }
     }
   }
 });
 
-export { userSessionsSlide };
+const { addSession, removeSession } = userSessionsSlide.actions;
+
+export { userSessionsSlide, addSession, removeSession };

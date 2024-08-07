@@ -1,17 +1,28 @@
+import { useEffect, useRef } from "react";
 import Button from "../components/common/Button";
 import BookmarkPlus from "../components/common/icons/BookmarkPlus";
 import BookOff from "../components/common/icons/BookOff";
 import Title from "../components/common/Title";
 import EmptyContent from "../components/EmptyContent";
 import { sessions } from "../data/sessions";
+import { useDispatch } from "../store/hooks";
 import type { Session } from "../types";
+import { addSession } from "../store/userSessionsSlide";
 
 type SessionProps = {
   id: string;
 };
 
 function Session({ id }: SessionProps) {
+  const pRef = useRef<HTMLParagraphElement>(null);
+  const dispatch = useDispatch();
   const session: Session | undefined = sessions.find((el) => el.id === id);
+
+  useEffect(() => {
+    if (pRef.current && session?.description) {
+      pRef.current.innerText = session.description;
+    }
+  }, [session?.description]);
 
   if (!session) {
     return (
@@ -39,24 +50,29 @@ function Session({ id }: SessionProps) {
 
   return (
     <>
-      <div className="mt-10 md:w-10/12 md:mx-auto lg:w-full lg:flex lg:items-start gap-10 lg:relative">
+      <div className="mt-10 md:w-10/12 md:mx-auto lg:w-full">
         <img
-          className="rounded-sm object-cover lg:w-2/4 md:mx-auto"
+          className="rounded-sm object-cover lg:w-6/12 md:mx-auto lg:float-end lg:mx-10 lg:mb-5"
           src={session.image}
           alt=""
         />
-        <div>
-          <div className="flex justify-center items-center flex-col gap-2 my-4 lg:mt-0 lg:items-start">
-            <Title className="text-2xl font-bold text-center lg:text-left lg:w-4/6">
-              {session.title}
-            </Title>
-            <span className="text-dark-gray font-bold">{session.date}</span>
-          </div>
-          <p className="text-lg">{session.description}</p>
+        <div className="flex justify-center items-center flex-col gap-2 my-4 lg:mt-0 lg:items-start lg:relative">
+          <Title className="text-2xl font-bold text-center lg:text-left lg:w-10/12 lg:text-3xl">
+            {session.title}
+          </Title>
+          <span className="text-dark-gray font-bold">{session.date}</span>
+          <Button
+            className="hidden lg:flex lg:justify-center lg:items-center bg-navy-blue text-light-gray p-3 rounded-md mx-auto lg:absolute lg:right-0 lg:top-2"
+            aria-label="Add session"
+            onClick={handleClick}
+          >
+            <BookmarkPlus width="25px" height="25px" />
+          </Button>
         </div>
+        <p ref={pRef} className="text-lg lg:text-xl" />
       </div>
       <Button
-        className="flex justify-center items-center gap-2 flex-wrap bg-navy-blue text-light-gray w-full max-w-40 rounded-sm h-12 mt-8 mx-auto lg:absolute lg:top-[90px] lg:right-14"
+        className="flex justify-center items-center gap-2 flex-wrap bg-navy-blue text-light-gray w-full max-w-40 rounded-sm h-12 mt-8 mx-auto lg:hidden"
         onClick={handleClick}
       >
         Add session
