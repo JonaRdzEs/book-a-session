@@ -9,9 +9,9 @@ import UpcomingSessions from "./pages/UpcomingSessions";
 function App() {
 
   return (
-    <div className="mx-auto w-full max-w-7xl min-h-dvh border-2 py-11 px-2 sm:px-10">
+    <div className="mx-auto w-full max-w-7xl min-h-dvh py-11 px-2 sm:px-10">
       <Header />
-      <main>
+      <main className="mt-16">
         <Switch>
           <Route path="/" component={Home} />
           <Route path="/sessions" component={Sessions} />

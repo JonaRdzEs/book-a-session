@@ -3,11 +3,12 @@ import BookmarkPlus from "../components/common/icons/BookmarkPlus";
 import { useSelector } from "../store/hooks";
 import SessionCard from "../components/SessionCard";
 import DeleteSessionButton from "../components/common/DeleteSessionButton";
+import { sessions as availableSessions } from "../data/sessions";
 
 function MySessions() {
   const { sessions } = useSelector((state) => state.userSessions);
-  console.log(sessions)
-;  if (sessions.length === 0) {
+
+  if (sessions.length === 0) {
     return (
       <EmptyContent
         icon={BookmarkPlus}
@@ -19,13 +20,22 @@ function MySessions() {
       />
     );
   }
-  return <ul className="flex gap-6 flex-col w-full mx-auto mt-10 sm:grid sm:grid-cols-2 sm:gap-5 xl:grid-cols-3">
-  {sessions.map((session) => (
-    <li key={session.sessionId}>
-      <SessionCard {...session} actionBtn={<DeleteSessionButton id={session.sessionId} />} />
-    </li>
-  ))}
-</ul>;
+
+  const sessionIds = sessions.map((session) => (session.sessionId));
+  const registeredSessions = availableSessions.filter((el) => sessionIds.includes(el.id));  
+
+  return (
+    <ul className="flex gap-6 flex-col w-full mx-auto mt-10 sm:grid sm:grid-cols-2 sm:gap-5 xl:grid-cols-3">
+      {registeredSessions.map((session) => (
+        <li key={session.id}>
+          <SessionCard
+            {...session}
+            actionBtn={<DeleteSessionButton id={session.id} />}
+          />
+        </li>
+      ))}
+    </ul>
+  );
 }
 
 export default MySessions;

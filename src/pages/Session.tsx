@@ -1,21 +1,20 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Button from "../components/common/Button";
 import BookmarkPlus from "../components/common/icons/BookmarkPlus";
 import BookOff from "../components/common/icons/BookOff";
 import Title from "../components/common/Title";
 import EmptyContent from "../components/EmptyContent";
 import { sessions } from "../data/sessions";
-import { useDispatch } from "../store/hooks";
 import type { Session } from "../types";
-import { addSession } from "../store/userSessionsSlide";
+import AddSessionModal from "../components/AddSessionModal";
 
 type SessionProps = {
   id: string;
 };
 
 function Session({ id }: SessionProps) {
+  const [isModalOpen, setModalOpen] = useState<boolean>(false);
   const pRef = useRef<HTMLParagraphElement>(null);
-  const dispatch = useDispatch();
   const session: Session | undefined = sessions.find((el) => el.id === id);
 
   useEffect(() => {
@@ -44,9 +43,7 @@ function Session({ id }: SessionProps) {
     );
   }
 
-  const handleClick = () => {
-
-  };
+  const handleClick = () => setModalOpen(true);
 
   return (
     <>
@@ -78,6 +75,7 @@ function Session({ id }: SessionProps) {
         Add session
         <BookmarkPlus width="20px" height="20px" />
       </Button>
+      <AddSessionModal isOpen={isModalOpen} onClose={() => setModalOpen(false)} sessionId={id} />
     </>
   );
 }
