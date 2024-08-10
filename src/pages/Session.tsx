@@ -1,11 +1,11 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import Button from "../components/common/Button";
 import BookmarkPlus from "../components/common/icons/BookmarkPlus";
 import BookOff from "../components/common/icons/BookOff";
 import Title from "../components/common/Title";
 import EmptyContent from "../components/EmptyContent";
 import { sessions } from "../data/sessions";
-import type { Session } from "../types";
+import type { ModalHandleProps, Session } from "../types";
 import AddSessionModal from "../components/AddSessionModal";
 
 type SessionProps = {
@@ -13,7 +13,7 @@ type SessionProps = {
 };
 
 function Session({ id }: SessionProps) {
-  const [isModalOpen, setModalOpen] = useState<boolean>(false);
+  const modalRef = useRef<ModalHandleProps>(null);
   const pRef = useRef<HTMLParagraphElement>(null);
   const session: Session | undefined = sessions.find((el) => el.id === id);
 
@@ -43,7 +43,7 @@ function Session({ id }: SessionProps) {
     );
   }
 
-  const handleClick = () => setModalOpen(true);
+  const openModal = () => modalRef?.current?.open();
 
   return (
     <>
@@ -61,7 +61,7 @@ function Session({ id }: SessionProps) {
           <Button
             className="hidden lg:flex lg:justify-center lg:items-center bg-navy-blue text-light-gray p-3 rounded-md mx-auto lg:absolute lg:right-0 lg:top-2"
             aria-label="Add session"
-            onClick={handleClick}
+            onClick={openModal}
           >
             <BookmarkPlus width="25px" height="25px" />
           </Button>
@@ -70,12 +70,12 @@ function Session({ id }: SessionProps) {
       </div>
       <Button
         className="flex justify-center items-center gap-2 flex-wrap bg-navy-blue text-light-gray w-full max-w-40 rounded-sm h-12 mt-8 mx-auto lg:hidden"
-        onClick={handleClick}
+        onClick={openModal}
       >
         Add session
         <BookmarkPlus width="20px" height="20px" />
       </Button>
-      <AddSessionModal isOpen={isModalOpen} onClose={() => setModalOpen(false)} sessionId={id} />
+      <AddSessionModal ref={modalRef} sessionId={id} />
     </>
   );
 }

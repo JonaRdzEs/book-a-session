@@ -9,10 +9,10 @@ const userSessionsSlide = createSlice({
   name: "user-sessions",
   initialState,
   reducers: {
-    addSession(state, action: PayloadAction<AddSessionPayload>):void {
+    addSession(state, action: PayloadAction<AddSessionPayload>) {
       const isSessionRegistered = state.sessions.find((session) => session.sessionId === action.payload.sessionId);
       if(isSessionRegistered) {
-        console.log("You cannot register to the same session");
+        throw new Error("You cannot register a session twice");
         return;
       }
 

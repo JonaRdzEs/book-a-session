@@ -20,3 +20,8 @@ export type UpcomingSession = {
   releaseDate: string;
   image: string;
 }
+
+export type ModalHandleProps = {
+  open: () => void,
+  close: () => void,
+}
