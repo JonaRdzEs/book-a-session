@@ -9,6 +9,7 @@ import { useDispatch } from "../store/hooks";
 import { addSession } from "../store/userSessionsSlide";
 import { ModalHandleProps } from "../types";
 import toast from "react-hot-toast";
+import Alert from "./common/Alert";
 
 type AddSessionModalProps = {
   sessionId: string
@@ -41,11 +42,11 @@ const AddSessionModal = forwardRef<ModalHandleProps, AddSessionModalProps>(
           email,
           sessionId,
         }));
-        toast.success("Registration completed!");
+        toast.custom((t) => <Alert variant="success" t={t}>Registration completed</Alert> )
         close();
       } catch (error) {
         if(error instanceof Error) {
-          toast.error(error.message)
+          toast.custom((t) => <Alert variant="error" t={t}>{error.message}</Alert> )
         } 
       }
     };

@@ -4,6 +4,7 @@ import { useSelector } from "../store/hooks";
 import SessionCard from "../components/SessionCard";
 import DeleteSessionButton from "../components/common/DeleteSessionButton";
 import { sessions as availableSessions } from "../data/sessions";
+import Title from "../components/common/Title";
 
 function MySessions() {
   const { sessions } = useSelector((state) => state.userSessions);
@@ -21,20 +22,35 @@ function MySessions() {
     );
   }
 
-  const sessionIds = sessions.map((session) => (session.sessionId));
-  const registeredSessions = availableSessions.filter((el) => sessionIds.includes(el.id));  
+  const sessionIds = sessions.map((session) => session.sessionId);
+  const registeredSessions = availableSessions.filter((el) =>
+    sessionIds.includes(el.id)
+  );
 
   return (
-    <ul className="flex gap-6 flex-col w-full mx-auto mt-10 sm:grid sm:grid-cols-2 sm:gap-5 xl:grid-cols-3">
-      {registeredSessions.map((session) => (
-        <li key={session.id}>
-          <SessionCard
-            {...session}
-            actionBtn={<DeleteSessionButton id={session.id} />}
-          />
-        </li>
-      ))}
-    </ul>
+    <>
+      <Title
+        level="h1"
+        className="font-bold text-2xl text-dark-charcoal sm:text-3xl"
+      >
+        Registered Sessions
+      </Title>
+      <p className="text-lg mt-3 text-dark-charcoal">
+        Here you can view all the upcoming web development sessions you've
+        signed up for. Stay organized, track your learning progress, and prepare
+        for each session with ease.
+      </p>
+      <ul className="flex gap-6 flex-col w-full mx-auto mt-10 sm:grid sm:grid-cols-2 sm:gap-5 xl:grid-cols-3">
+        {registeredSessions.map((session) => (
+          <li key={session.id}>
+            <SessionCard
+              {...session}
+              actionBtn={<DeleteSessionButton id={session.id} />}
+            />
+          </li>
+        ))}
+      </ul>
+    </>
   );
 }
 

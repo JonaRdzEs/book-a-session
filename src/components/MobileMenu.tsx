@@ -29,19 +29,19 @@ function MobileMenu({ className = "" }: MobileMenuProps) {
       </Button>
       {isMenuOpen && (
         <ul id="mobile-menu" className="absolute z-10 bg-[#f8f8f8] w-48 right-0 rounded-sm flex justify-start items-start flex-col shadow-[0px_3px_3px_0px_rgba(0,0,0,0.15)]">
-          <li className="text-dark-charcoal w-full px-3 py-5">
+          <li className="text-dark-charcoal w-full p-3 border-b border-gray">
             <Button className="flex justify-start items-center gap-2 w-full" to="/sessions" onClick={close}>
               <Book className="w-6 h-6" />
               Browse sessions
             </Button>
           </li>
-          <li className="text-dark-charcoal w-full p-3">
+          <li className="text-dark-charcoal w-full p-3 border-b border-gray">
             <Button className="flex justify-start items-center gap-2 w-full" to="/upcoming-sessions" onClick={close}>
             <BookUpload className="w-6 h-6" />
               Upcoming sessions
             </Button>
           </li>
-          <li className="text-dark-charcoal w-full p-3">
+          <li className="text-dark-charcoal w-full p-3 border-b border-gray">
             <Button className="flex justify-start items-center gap-2 w-full" to="/my-sessions" onClick={close}>
             <BookmarkPlus className="w-6 h-6" />
               My sessions

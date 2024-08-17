@@ -11,7 +11,7 @@ function Info({ icon, title, desc }: InfoProps) {
     <div className="flex justify-center items-center flex-col gap-3">
       {icon}
       <h4 className="text-center text-xl font-extrabold text-dark-charcoal">{title}</h4>
-      <p className="text-center text-md font-medium text-dark-charcoal">{desc}</p>
+      <p className="text-center text-md font-medium text-dark-charcoal xl:w-10/12 xl:mx-auto">{desc}</p>
     </div>
   );
 }

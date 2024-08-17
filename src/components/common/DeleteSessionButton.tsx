@@ -10,7 +10,6 @@ type ButtonProps = {
 function DeleteSessionButton({ id }: ButtonProps) {
   const dispatch = useDispatch();
   const handleDelete = () => {
-    console.log("Deleting ", id)
     dispatch(removeSession(id));
   };
 
