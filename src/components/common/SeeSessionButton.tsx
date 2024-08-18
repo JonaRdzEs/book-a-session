@@ -8,7 +8,7 @@ type ButtonProps = {
 function SeeSessionButton({ id }: ButtonProps) {
 
   return (
-    <Button className="text-navy-blue" to={`/sessions/${id}`}>
+    <Button className="text-navy-blue" to={`/${id}`}>
       <SquareRoundedArrowRight width="35px" height="35px" />
     </Button>
   );
